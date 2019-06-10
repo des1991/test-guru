@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+admin = User.create(
+  name: 'Admin',
+  login: 'admin',
+  password: 'admin_password'
+)
+
 guest = User.create(
   name: 'Guest',
   login: 'guest',
@@ -21,8 +27,8 @@ user = User.create(
 categories = Category.create(title: 'Liverpool FC')
 
 tests = Test.create([
-  { title: 'История', level: 1, category_id: categories.id },
-  { title: 'Символика', level: 2, category_id: categories.id }
+  { title: 'История', level: 1, category_id: categories.id, user_id: admin.id },
+  { title: 'Символика', level: 2, category_id: categories.id, user_id: admin.id }
 ])
 
 questions = Question.create([
@@ -51,11 +57,16 @@ answers = Answer.create([
   { body: 'Черный', question_id: 3, correct: false }
 ])
 
+TestsUser.create([
+  { test_id: tests[0].id, user_id: guest.id },
+  { test_id: tests[1].id, user_id: user.id }
+])
+
 categories = Category.create(title: 'Manchester United FC')
 
 tests = Test.create([
-  { title: 'Стадион', level: 1, category_id: categories.id },
-  { title: 'Болельщики', level: 2, category_id: categories.id }
+  { title: 'Стадион', level: 1, category_id: categories.id, user_id: admin.id },
+  { title: 'Болельщики', level: 2, category_id: categories.id, user_id: admin.id }
 ])
 
 questions = Question.create([
