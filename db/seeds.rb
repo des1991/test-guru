@@ -9,19 +9,22 @@
 admin = User.create(
   name: 'Admin',
   login: 'admin',
-  password: 'admin_password'
+  password: 'admin_password',
+  email: 'admin@email.com'
 )
 
 guest = User.create(
   name: 'Guest',
   login: 'guest',
-  password: 'guest_password'
+  password: 'guest_password',
+  email: 'guest@email.com'
 )
 
 user = User.create(
   name: 'User',
   login: 'user',
-  password: 'user_password'
+  password: 'user_password',
+  email: 'user@email.com'
 )
 
 categories = Category.create(title: 'Liverpool FC')
@@ -39,22 +42,22 @@ questions = Question.create([
 ])
 
 answers = Answer.create([
-  { body: '1892', question_id: 0, correct: true },
-  { body: '1793', question_id: 0, correct: false },
-  { body: '1854', question_id: 0, correct: false },
-  { body: '1799', question_id: 0, correct: false },
-  { body: 'Дикси Дин', question_id: 1, correct: false },
-  { body: 'Бил Шенкли', question_id: 1, correct: false },
-  { body: 'Джон Хоулдинг', question_id: 1, correct: true },
-  { body: 'Джон Оррел', question_id: 1, correct: false },
-  { body: 'Река Мерси', question_id: 2, correct: false },
-  { body: 'Стадион Энфилд', question_id: 2, correct: false },
-  { body: 'Ворота Шенкли', question_id: 2, correct: false },
-  { body: 'Птица Лайвер', question_id: 2, correct: true },
-  { body: 'Синий', question_id: 3, correct: false },
-  { body: 'Красный', question_id: 3, correct: true },
-  { body: 'Белый', question_id: 3, correct: false },
-  { body: 'Черный', question_id: 3, correct: false }
+  { body: '1892', question_id: questions[0].id, correct: true },
+  { body: '1793', question_id: questions[0].id, correct: false },
+  { body: '1854', question_id: questions[0].id, correct: false },
+  { body: '1799', question_id: questions[0].id, correct: false },
+  { body: 'Дикси Дин', question_id: questions[1].id, correct: false },
+  { body: 'Бил Шенкли', question_id: questions[1].id, correct: false },
+  { body: 'Джон Хоулдинг', question_id: questions[1].id, correct: true },
+  { body: 'Джон Оррел', question_id: questions[1].id, correct: false },
+  { body: 'Река Мерси', question_id: questions[2].id, correct: false },
+  { body: 'Стадион Энфилд', question_id: questions[2].id, correct: false },
+  { body: 'Ворота Шенкли', question_id: questions[2].id, correct: false },
+  { body: 'Птица Лайвер', question_id: questions[2].id, correct: true },
+  { body: 'Синий', question_id: questions[3].id, correct: false },
+  { body: 'Красный', question_id: questions[3].id, correct: true },
+  { body: 'Белый', question_id: questions[3].id, correct: false },
+  { body: 'Черный', question_id: questions[3].id, correct: false }
 ])
 
 TestsUser.create([
@@ -75,12 +78,12 @@ questions = Question.create([
 ])
 
 answers = Answer.create([
-  { body: 'Олд Траффорд', question_id: 0, correct: true },
-  { body: 'Энфилд', question_id: 0, correct: false },
-  { body: 'Этихад стэдиум', question_id: 0, correct: false },
-  { body: 'Уэмбли', question_id: 0, correct: false },
-  { body: 'Красные дьяволы', question_id: 1, correct: false },
-  { body: 'Манчестер Юнайтед скуад', question_id: 1, correct: false },
-  { body: 'Независимая ассоциация болельщиков Манчестер Юнайтед', question_id: 1, correct: true },
-  { body: 'Юнайтед оф Манчестер', question_id: 1, correct: false }
+  { body: 'Олд Траффорд', question_id: questions[0].id, correct: true },
+  { body: 'Энфилд', question_id: questions[0].id, correct: false },
+  { body: 'Этихад стэдиум', question_id: questions[0].id, correct: false },
+  { body: 'Уэмбли', question_id: questions[0].id, correct: false },
+  { body: 'Красные дьяволы', question_id: questions[0].id, correct: false },
+  { body: 'Манчестер Юнайтед скуад', question_id: questions[0].id, correct: false },
+  { body: 'Независимая ассоциация болельщиков Манчестер Юнайтед', question_id: questions[0].id, correct: true },
+  { body: 'Юнайтед оф Манчестер', question_id: questions[1].id, correct: false }
 ])
