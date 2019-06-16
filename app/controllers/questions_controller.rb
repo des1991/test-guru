@@ -8,17 +8,19 @@ class QuestionsController < ApplicationController
     @questions = @test.questions
   end
 
-  def show
-    @question
-  end
+  def show; end
 
   def new
   end
 
   def create
-    @test.questions.create(question_params)
-
-    redirect_to test_questions_path
+    question = @test.questions.new(question_params)
+    
+    if question.save
+      redirect_to question
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -42,6 +44,6 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_with_question_not_found
-    render plain: 'Question not found!'
+    render plain: 'Question not found!', status: 404
   end
 end
