@@ -1,0 +1,12 @@
+<%= form_with model: [@test, @question], local: true do |form| %>
+  <%= form.hidden_field :test_id %>
+
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_field :body %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
