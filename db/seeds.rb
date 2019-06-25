@@ -60,11 +60,6 @@ answers = Answer.create([
   { body: 'Черный', question_id: questions[3].id, correct: false }
 ])
 
-TestsUser.create([
-  { test_id: tests[0].id, user_id: guest.id },
-  { test_id: tests[1].id, user_id: user.id }
-])
-
 categories = Category.create(title: 'Manchester United FC')
 
 tests = Test.create([
