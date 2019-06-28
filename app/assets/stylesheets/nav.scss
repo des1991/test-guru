@@ -1,0 +1,19 @@
+.nav-top {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+
+    &.nav-top-main {
+      margin: 0 40px 0 0;
+      font-size: 20px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
