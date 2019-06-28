@@ -1,2 +1,2 @@
-<%= flash_alert(flash[:alert]) if flash[:alert] %>
-<%= flash_notice(flash[:notice]) if flash[:notice] %>
+<%= flash_msg(flash[:alert], 'flash alert') if flash[:alert] %>
+<%= flash_msg(flash[:notice], 'flash notice') if flash[:notice] %>
