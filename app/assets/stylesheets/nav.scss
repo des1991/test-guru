@@ -3,6 +3,16 @@
   padding: 0;
   margin: 0;
 
+  &.admin {
+    padding: 10px;
+    background-color: #4293e6;
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
+
   li {
     display: inline-block;
     margin: 0 10px;
