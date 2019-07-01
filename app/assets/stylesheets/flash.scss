@@ -2,8 +2,12 @@
   border: 2px solid;
   padding: 10px;
   border-radius: 5px;
-}
 
-.flash.alert {
-  border-color: red;
+  &.alert {  
+    border-color: red;
+  }
+
+  &.notice {
+    border-color: green;
+  }
 }

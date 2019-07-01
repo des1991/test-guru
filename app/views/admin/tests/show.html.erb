@@ -1,0 +1,23 @@
+<h1><%= @test.title %></h1>
+
+<div>
+  <strong>Level:</strong> <%= @test.level %><br>
+  <strong>Category: </strong> <%= @test.category.title %><br>
+  <strong>Author: </strong> <%= @test.author.email %>
+</div>
+
+<hr>
+
+<%= link_to 'Edit', edit_admin_test_path(@test) %>
+
+<hr>
+
+<%= render 'admin/questions/questions', questions: @test.questions %>
+
+<hr>
+
+<%= link_to 'Create question', new_admin_test_question_path(@test) %>
+
+<hr>
+
+<%= link_to '< back', admin_tests_path %>

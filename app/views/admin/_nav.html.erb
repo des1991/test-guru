@@ -1,0 +1,9 @@
+<nav>
+  <ul class="nav-top admin">
+    <li class="nav-top-main"><%= link_to 'TestGuru Admin Panel', root_path %></li>
+    <li><%= link_to 'Tests', admin_tests_path %></li>
+    <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+    <li class="nav-top-info">Welcome, <%= current_user.email %> Admin</li>
+  </ul>
+</nav>
+<hr>
