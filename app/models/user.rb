@@ -32,4 +32,8 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}" unless first_name.nil? && last_name.nil?
   end
+
+  def admin?
+    self.is_a?(Admin)
+  end
 end
