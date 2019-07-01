@@ -1,8 +1,8 @@
-<h1>Passing the <%= @test_passage.test.title %> test</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<strong><%= @test_passage.current_question.body %></strong>
+<h2><%= @test_passage.current_question.body %></h2>
 
-<p><strong>Question <%= @test_passage.question_number %> of the <%= @test_passage.test.questions.count %></strong></p>
+<p><strong><%= t('.questions_number', current: @test_passage.question_number, sum: @test_passage.test.questions.count) %></strong></p>
 
 <%= form_with url: test_passage_path(@test_passage), 
               local: true,
@@ -18,5 +18,5 @@
     </p>
   <% end %>
 
-  <p><%= form.submit 'Next' %></p>
+  <p><%= form.submit t('.next') %></p>
 <% end %>

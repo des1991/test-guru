@@ -1,13 +1,13 @@
-<h1>Tests</h1>
+<h1><%= t('.header') %></h1>
 
 <table border="1" cellpadding="5" cellspacing="0">
   <tr>
-    <th>Title</th>
-    <th>Level</th>
-    <th>Category</th>
-    <th>Author</th>
-    <th>Questions</th>
-    <th>Action</th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.category') %></th>
+    <th><%= t('.author') %></th>
+    <th><%= t('.questions') %></th>
+    <th><%= t('.action') %></th>
   </tr>
   <%= render @tests %>
 </table>

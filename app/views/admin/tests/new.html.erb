@@ -1,7 +1,7 @@
-<h1>New test</h1>
+<h1><%= t('.header') %></h1>
 
 <%= render 'form', test: @test %>
 
 <hr>
 
-<%= link_to '< back', admin_tests_path %>
+<%= link_to t('other.back'), admin_tests_path %>

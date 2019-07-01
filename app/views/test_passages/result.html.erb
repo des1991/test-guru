@@ -1,7 +1,7 @@
-<h1>The <%= @test_passage.test.title %> test was Completed!</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
   
 <% if @test_passage.passed? %>
-  <p class="test_passed">Test was PASSED (<%= @test_passage.correct_percent %>%)</p>
+  <p class="test_passed"><%= t('.passed', persent: @test_passage.correct_percent) %></p>
 <% else %>
-  <p class="test_failed">Test was FAILED (<%= @test_passage.correct_percent %>%)</p>  
+  <p class="test_failed"><%= t('.failed', persent: @test_passage.correct_percent) %></p>  
 <% end %>
