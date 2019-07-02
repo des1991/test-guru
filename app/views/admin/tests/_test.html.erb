@@ -4,11 +4,11 @@
   <td><%= test.category.title %></td>
   <td><%= test.author.email %></td>
   <td><%= test.questions.size %></td>
-  <td><%= link_to 'Show', admin_test_path(test) %></td>
-  <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
-  <td><%= link_to 'Delete',
+  <td><%= link_to t('other.show'), admin_test_path(test) %></td>
+  <td><%= link_to t('other.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('other.delete'),
                   admin_test_path(test),
                   method: :delete,
-                  data: { confirm: 'Are you suer?' } %>
+                  data: { confirm: t('other.confirm') } %>
   </td>
 </tr>

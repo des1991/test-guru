@@ -1,9 +1,9 @@
 <tr>
   <td><%= link_to question.body, admin_question_path(question) %></td>
-  <td><%= link_to 'Edit', edit_admin_question_path(question) %></td>
-  <td><%= link_to 'Delete',
+  <td><%= link_to t('other.edit'), edit_admin_question_path(question) %></td>
+  <td><%= link_to t('other.delete'),
                   admin_question_path,
                   method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
+                  data: { confirm: t('other.confirm') } %>
   </td>
 </tr>

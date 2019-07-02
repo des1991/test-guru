@@ -1,33 +1,107 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+
+  other:
+    back: "< Back"
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
+    start: "Start"
+
+  devise:
+    registrations:
+      edit:
+      new:
+        signup_title: "Become a Guru"
+        password_minimum: "(%{length} characters minimum)"
+    sessions:
+      new:
+        login_title: "Enter the Guru gates"
+        enter: "Enter"
+    passwords:
+      new:
+        title: "Forgot your password?"
+        send: "Send me reset password instructions"
+    confirmations:
+      new:
+        title: "Resend confirmation instructions"
+        send: "Send"
+    shared:
+      links:
+        login: "Log in"
+        signup: "Sign up"
+        forgot_password: "Forgot your password?"
+        confirmation_instructions: "Didn't receive confirmation instructions?"
+        unlock_instructions: "Didn't receive unlock instructions?"
+        sign_in_with: "Sign in with %{omni}"
+
+
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select:
+        prompt: "Choose from list"
+
+  shared:
+    nav:
+      login: "Login"
+      logout: "Logout"
+      signup: "Signup"
+      welcome_user: "Welcome, %{user} Guru"
+    validation_errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Tricky tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      author: "Author"
+      questions: "Questions"
+      action: "Action"
+
+  test_passages:
+    show:
+      header: "Passing the %{title} test"
+      questions_number: "Question %{current} of the %{sum}"
+      next: "Next"
+    result:
+      header: "The %{title} Test was Completed!"
+      passed: "Test was PASSED (%{persent})"
+      failed: "Test was FAILED (%{persent})"
+
+  admin:
+    nav:
+      admin_panel: "TestGuru Admin Panel"
+      welcome_admin: "Welcome, %{user} Admin"
+    tests:
+      index:
+        header: "Tricky tests"
+        create_test: "Create test"
+      new:
+        header: "Create new test"
+      create:
+        success: "Test was successfully created."
+      show:
+        create_question: "Create question"
+      edit:
+        header: "Edit %{title} test"
+    questions:
+      questions:
+        body: "Question"
+        actions: "Actions"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

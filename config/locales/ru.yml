@@ -1,33 +1,108 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 ru:
   hello: "Привет мир"
+
+  other:
+    back: "< Назад"
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    confirm: "Вы уверены?"
+    start: "Начать"
+
+  devise:
+    registrations:
+      edit:
+      new:
+        signup_title: "Станьте Гуру"
+        password_minimum: "(минимум %{length} символов)"
+    sessions:
+      new:
+        login_title: "Вход пользователей"
+        enter: "Войти"
+    passwords:
+      new:
+        title: "Забыли пароль?"
+        send: "Отправить мне инструкцию по сбросу пароля"
+    confirmations:
+      new:
+        title: "Отправить письмо с подтверждением повторно"
+        send: "Отправить"
+    shared:
+      links:
+        login: "Войти"
+        signup: "Регистрация"
+        forgot_password: "Забыли пароль?"
+        confirmation_instructions: "Не пришло письмо с подтверждением регистрации?"
+        unlock_instructions: "Не пришло письмо для разблокирования?"
+        sign_in_with: "Войти помощью %{omni}"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+        prompt: "Выберите из списка"
+
+  shared:
+    nav:
+      login: "Войти"
+      logout: "Выйти"
+      signup: "Регистрация"
+      welcome_user: "Здравствуйте, %{user} Гуру"
+    validation_errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      author: "Автор"
+      questions: "Вопросы"
+      action: "Дейстие"
+
+  test_passages:
+    show:
+      header: "Прохождение теста %{title}"
+      questions_number: "Вопрос %{current} из %{sum}"
+      next: "Следующий"
+    result:
+      header: "Тест %{title} успешно завершен!"
+      passed: "Тест ПРОЙДЕН (%{persent})"
+      failed: "Тест ПРОВАЛЕН (%{persent})"
+
+  admin:
+    nav:
+      admin_panel: "TestGuru панель администратора"
+      welcome_admin: "Здравствуйте, %{user} Администратор"
+    tests:
+      index:
+        header: "Доступные тесты"
+        create_test: "Создать тест"
+      new:
+        header: "Создать новый тест"
+      create:
+        success: "Тест успешно создан."
+      show:
+        create_question: "Создать вопрос"
+      edit:
+        header: "Редактировать тест %{title}"
+    questions:
+      questions:
+        body: "Вопрос"
+        actions: "Действия"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
