@@ -1,7 +1,7 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
   
 <% if @test_passage.passed? %>
-  <p class="test_passed"><%= t('.passed', persent: @test_passage.correct_percent) %></p>
+  <div class="alert alert-success"><%= t('.passed', persent: @test_passage.correct_percent) %></div>
 <% else %>
-  <p class="test_failed"><%= t('.failed', persent: @test_passage.correct_percent) %></p>  
+  <div class="alert alert-danger"><%= t('.failed', persent: @test_passage.correct_percent) %></div>  
 <% end %>

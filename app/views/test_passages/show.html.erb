@@ -12,11 +12,11 @@
                                   :id,
                                   :body,
                                   include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-      <%= b.label %>
-    </p>
+    <div class="form-check mb-3">
+      <%= b.check_box id: "answer_ids_#{b.object.id}", class: "form-check-input" %>
+      <%= b.label class: "form-check-label" %>
+    </div>
   <% end %>
 
-  <p><%= form.submit t('.next') %></p>
+  <p><%= form.submit t('.next'), class: "btn btn-primary" %></p>
 <% end %>

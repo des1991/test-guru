@@ -4,10 +4,11 @@
   <td><%= test.category.title %></td>
   <td><%= test.author.email %></td>
   <td><%= test.questions.size %></td>
-  <td><%= link_to t('other.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('other.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('other.show'), admin_test_path(test), class: "btn btn-outline-success" %></td>
+  <td><%= link_to t('other.edit'), edit_admin_test_path(test), class: "btn btn-outline-warning" %></td>
   <td><%= link_to t('other.delete'),
                   admin_test_path(test),
+                  class: "btn btn-outline-danger",
                   method: :delete,
                   data: { confirm: t('other.confirm') } %>
   </td>

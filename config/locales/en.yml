@@ -19,6 +19,7 @@ en:
       new:
         login_title: "Enter the Guru gates"
         enter: "Enter"
+        remember_me: "Remember me"
     passwords:
       new:
         title: "Forgot your password?"
@@ -35,7 +36,6 @@ en:
         confirmation_instructions: "Didn't receive confirmation instructions?"
         unlock_instructions: "Didn't receive unlock instructions?"
         sign_in_with: "Sign in with %{omni}"
-
 
   helpers:
     submit:
@@ -56,6 +56,7 @@ en:
       logout: "Logout"
       signup: "Signup"
       welcome_user: "Welcome, %{user} Guru"
+      admin_link: "Admin panel"
     validation_errors:
       header:
         one: "%{count} error detected"
@@ -78,8 +79,8 @@ en:
       next: "Next"
     result:
       header: "The %{title} Test was Completed!"
-      passed: "Test was PASSED (%{persent})"
-      failed: "Test was FAILED (%{persent})"
+      passed: "Test was PASSED (%{persent}%)"
+      failed: "Test was FAILED (%{persent}%)"
 
   admin:
     nav:
