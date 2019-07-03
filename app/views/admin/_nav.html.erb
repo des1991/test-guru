@@ -1,9 +1,12 @@
-<nav>
-  <ul class="nav-top admin">
-    <li class="nav-top-main"><%= link_to t('.admin_panel'), root_path %></li>
-    <li><%= link_to 'Tests', admin_tests_path %></li>
-    <li><%= link_to t('shared.nav.logout'), destroy_user_session_path, method: :delete %></li>
-    <li class="nav-top-info"><%= t('.welcome_admin', user: current_user.email) %></li>
-  </ul>
+<nav class="navbar navbar-dark bg-primary">
+  <%= link_to 'TestGuru', admin_tests_path, class: 'navbar-brand text-white' %>
+  <span class="navbar-text text-light">
+    <% if user_signed_in? %>
+      <%= t('.welcome_admin', user: current_user.email) %> |
+      <%= link_to t('shared.nav.logout'), destroy_user_session_path, method: :delete %>  
+    <% else %>
+      <%= link_to t('shared.nav.login'), new_user_session_path %> |
+      <%= link_to t('shared.nav.signup'), new_user_registration_path %>
+    <% end %>
+  </span>
 </nav>
-<hr>

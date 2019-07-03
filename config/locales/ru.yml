@@ -19,6 +19,7 @@ ru:
       new:
         login_title: "Вход пользователей"
         enter: "Войти"
+        remember_me: "Запомнить меня"
     passwords:
       new:
         title: "Забыли пароль?"
@@ -55,6 +56,7 @@ ru:
       logout: "Выйти"
       signup: "Регистрация"
       welcome_user: "Здравствуйте, %{user} Гуру"
+      admin_link: "Панель администратора"
     validation_errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -79,8 +81,8 @@ ru:
       next: "Следующий"
     result:
       header: "Тест %{title} успешно завершен!"
-      passed: "Тест ПРОЙДЕН (%{persent})"
-      failed: "Тест ПРОВАЛЕН (%{persent})"
+      passed: "Тест ПРОЙДЕН (%{persent}%)"
+      failed: "Тест ПРОВАЛЕН (%{persent}%)"
 
   admin:
     nav:
