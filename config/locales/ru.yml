@@ -1,6 +1,10 @@
 ru:
   hello: "Привет мир"
 
+  nav:
+    tests: "Тесты"
+    gists: "Гисты"
+
   other:
     back: "< Назад"
     show: "Показать"
@@ -79,10 +83,14 @@ ru:
       header: "Прохождение теста %{title}"
       questions_number: "Вопрос %{current} из %{sum}"
       next: "Следующий"
+      gist_question: "Сохранить вопрос в Gist"
     result:
       header: "Тест %{title} успешно завершен!"
       passed: "Тест ПРОЙДЕН (%{persent}%)"
       failed: "Тест ПРОВАЛЕН (%{persent}%)"
+    gist:
+      success: "%{url} успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     nav:
@@ -104,7 +112,15 @@ ru:
       questions:
         body: "Вопрос"
         actions: "Действия"
+    gists:
+      index:
+        question: "Вопрос"
+        gist_id: "Ссылка на Gist"
+        user: "Пользователь"
 
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  gist:
+    description: "Вопрос %{title} от TestGuru"

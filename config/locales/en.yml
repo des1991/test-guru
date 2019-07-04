@@ -1,6 +1,10 @@
 en:
   hello: "Hello world"
 
+  nav:
+    tests: "Tests"
+    gists: "Gists"
+
   other:
     back: "< Back"
     show: "Show"
@@ -77,10 +81,14 @@ en:
       header: "Passing the %{title} test"
       questions_number: "Question %{current} of the %{sum}"
       next: "Next"
+      gist_question: "Gist question"
     result:
       header: "The %{title} Test was Completed!"
       passed: "Test was PASSED (%{persent}%)"
       failed: "Test was FAILED (%{persent}%)"
+    gist:
+      success: "%{url} was successfully created!"
+      failure: "An error occured while saving gist"
 
   admin:
     nav:
@@ -102,7 +110,15 @@ en:
       questions:
         body: "Question"
         actions: "Actions"
+    gists:
+      index:
+        question: "Question"
+        gist_id: "Gist URL"
+        user: "User"
 
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  gist:
+    description: "A question about %{title} from TestGuru"

@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.5'
 
+# .env
+gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
@@ -27,13 +29,21 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Auth
 gem 'devise', '~> 4.0'
 
 # LOCALIZATION
 gem 'rails-i18n', '~> 5.0.0'
 
+# UI
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+# Networking
+gem 'faraday'
+
+# GitHub Octokit
+gem "octokit", "~> 4.0"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
