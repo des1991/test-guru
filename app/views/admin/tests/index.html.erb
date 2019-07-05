@@ -2,6 +2,8 @@
 
 <p><%= link_to t('.create_test'), new_admin_test_path, class: "btn btn-outline-primary" %></p>
 
+<%= render 'shared/validation_errors', resource: @test %>
+
 <table class="table table-hover">
   <thead>
     <tr>
