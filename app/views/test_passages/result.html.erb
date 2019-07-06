@@ -1,4 +1,8 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
+
+<div class="progress mb-4">
+  <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="<%= @test_passage.test.questions.count %>" aria-valuemin="0" aria-valuemax="<%= @test_passage.test.questions.count %>">0%</div>
+</div>
   
 <% if @test_passage.passed? %>
   <div class="alert alert-success"><%= t('.passed', persent: @test_passage.correct_percent) %></div>

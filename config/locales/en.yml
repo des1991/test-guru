@@ -106,6 +106,8 @@ en:
         create_question: "Create question"
       edit:
         header: "Edit %{title} test"
+      form_inline:
+        submit: "Ok"
     questions:
       questions:
         body: "Question"

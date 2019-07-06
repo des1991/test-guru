@@ -108,6 +108,8 @@ ru:
         create_question: "Создать вопрос"
       edit:
         header: "Редактировать тест %{title}"
+      form_inline:
+        submit: "Ok"
     questions:
       questions:
         body: "Вопрос"
