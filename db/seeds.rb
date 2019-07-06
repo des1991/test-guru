@@ -7,24 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 admin = User.create(
-  name: 'Admin',
-  login: 'admin',
-  password: 'admin_password',
-  email: 'admin@email.com'
+  first_name: 'Admin',
+  last_name: 'Guru',
+  password: 'adminguru',
+  email: 'admin@example.com',
+  type: 'Admin'
 )
 
 guest = User.create(
-  name: 'Guest',
-  login: 'guest',
-  password: 'guest_password',
-  email: 'guest@email.com'
-)
-
-user = User.create(
-  name: 'User',
-  login: 'user',
-  password: 'user_password',
-  email: 'user@email.com'
+  first_name: 'Guest',
+  last_name: 'Guru',
+  password: 'guestguru',
+  email: 'guest@example.com'
 )
 
 categories = Category.create(title: 'Liverpool FC')
