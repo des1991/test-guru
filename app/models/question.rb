@@ -1,7 +1,9 @@
 class Question < ApplicationRecord
-  has_many :answers
-  has_many :gists
+  has_many :answers, dependent: :destroy
+  has_many :gists, dependent: :destroy
   belongs_to :test
+
+  scope :active, -> { joins(:answers).distinct }
 
   validates :body, presence: true
 end

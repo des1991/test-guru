@@ -4,7 +4,7 @@ document.addEventListener('turbolinks:load', function() {
   if (progressbar) {
     var current = progressbar.getAttribute('aria-valuenow')
     var max = progressbar.getAttribute('aria-valuemax')
-    var percent = (current * 100 / max) + '%'
+    var percent = Math.round(current * 100 / max) + '%'
 
     progressbar.style.width = percent
     progressbar.textContent = percent
