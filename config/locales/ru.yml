@@ -46,6 +46,8 @@ ru:
       test:
         create: "Создать Тест"
         update: "Обновить Тест"
+      feedback:
+        create: "Отправить"
     label:
       test:
         title: "Название"
@@ -126,3 +128,10 @@ ru:
 
   gist:
     description: "Вопрос %{title} от TestGuru"
+
+  feedbacks:
+    new:
+      header: "Обратная связь"
+      submit: "Отправить"
+    create:
+      sended: "Сообщение отправлено"

@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test', foreign_key: 'user_id'
   has_many :gists
+  has_many :feedbacks
   
   validates :email, format: VALID_EMAIL
   validates :email, uniqueness: { case_sensitive: false }

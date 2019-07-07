@@ -46,6 +46,8 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      feedback:
+        create: "Send"
     label:
       test:
         title: "Title"
@@ -124,3 +126,10 @@ en:
 
   gist:
     description: "A question about %{title} from TestGuru"
+
+  feedbacks:
+    new:
+      header: "Feedback"
+      submit: "Send"
+    create:
+      sended: "The message was sended"

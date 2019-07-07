@@ -3,6 +3,7 @@ ru:
     models:
       test: "Тест"
       user: "Пользователь"
+      feedback: "Обратная связь"
 
     attributes:
       test:
@@ -14,6 +15,8 @@ ru:
         password: "Пароль"
         password_confirmation: "Повторите пароль"
         remember_me: "Запомнить меня"
+      feedback:
+        message: "Сообщение"
 
     errors:
       messages:
