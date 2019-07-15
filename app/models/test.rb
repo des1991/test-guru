@@ -10,6 +10,7 @@ class Test < ApplicationRecord
   scope :hard_level, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, ->(title) { 
     joins(:category).where(categories: { title: title }) }
+  scope :by_level, -> (level) { where(level: level) }
 
   validates :title, presence: true, uniqueness: { case_sensitive: false,
                                                   scope: :level }
@@ -22,5 +23,11 @@ class Test < ApplicationRecord
 
   def active?
     questions.active.any?
+  end
+
+  private
+
+  def self.levels
+    all.pluck(:level).uniq.sort
   end
 end

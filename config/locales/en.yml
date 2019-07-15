@@ -4,6 +4,7 @@ en:
   nav:
     tests: "Tests"
     gists: "Gists"
+    badges: "Badges"
 
   other:
     back: "< Back"
@@ -12,6 +13,8 @@ en:
     delete: "Delete"
     confirm: "Are you sure?"
     start: "Start"
+    create: "Create"
+    action: "Action"
 
   devise:
     registrations:
@@ -119,6 +122,9 @@ en:
         question: "Question"
         gist_id: "Gist URL"
         user: "User"
+    badges:
+      show:
+        rule: "Rule"
 
   tests_mailer:
     completed_test:
@@ -133,3 +139,9 @@ en:
       submit: "Send"
     create:
       sended: "The message was sended"
+
+  badges:
+    index:
+      header: "Badges"
+      title: "Title"
+      image: "Image"

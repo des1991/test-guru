@@ -1,0 +1,2 @@
+module Admin::BadgeRulesHelper
+end

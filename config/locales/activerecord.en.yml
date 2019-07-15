@@ -4,6 +4,8 @@ en:
       test: "Test"
       user: "User"
       feedback: "Feedback"
+      badges: "Badges"
+      badge_rules: "Badge rules"
 
     attributes:
       test:
@@ -17,6 +19,11 @@ en:
         remember_me: "Remember me"
       feedback:
         message: "Message"
+      badges:
+        title: "Title"
+        image: "Image"
+      badge_rules:
+        rule_value: "Value"
 
     errors:
       messages:

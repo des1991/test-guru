@@ -3,6 +3,7 @@
   <ul class="navbar-nav mr-auto">
     <li class="nav-item"><%= link_to t('nav.tests'), admin_tests_path, class: 'nav-link' %></li>
     <li class="nav-item"><%= link_to t('nav.gists'), admin_gists_path, class: 'nav-link' %></li>
+    <li class="nav-item"><%= link_to t('nav.badges'), admin_badges_path, class: 'nav-link' %></li>
   </ul>
   <span class="navbar-text text-light">
     <% if user_signed_in? %>
