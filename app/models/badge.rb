@@ -4,14 +4,4 @@ class Badge < ApplicationRecord
 
   validates :title, presence: true
   validates :image, presence: true
-
-  def self.reward(test_passage)
-    user = test_passage.user
-
-    all.each do |badge|
-      if badge.rule.passed?(test_passage)
-        user.badges << badge
-      end
-    end
-  end
 end
