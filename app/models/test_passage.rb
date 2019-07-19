@@ -31,6 +31,11 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id <= ?', current_question.id).count
   end
 
+  def time_left
+    time = created_at + test.timer_in_seconds - Time.current
+    time >= 0 ? time : 0
+  end
+
   private
 
   def before_validation_set_first_question

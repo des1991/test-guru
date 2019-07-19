@@ -7,6 +7,7 @@
   <td><%= test.category.title %></td>
   <td><%= test.author.email %></td>
   <td><%= test.questions.size %></td>
+  <td><%= t('.timer', timer: test.timer) %></td>
   <td><%= link_to t('other.show'), admin_test_path(test), class: "btn btn-outline-success" %></td>
   <td>
     <%= link_to t('other.edit'),

@@ -16,6 +16,8 @@ class Test < ApplicationRecord
                                                   scope: :level }
   validates :level, numericality: { only_integer: true, 
                                     greater_than_or_equal_to: 0 }
+  validates :timer, numericality: { only_integer: true, 
+                                    greater_than_or_equal_to: 0 }
 
   def self.titles_by_category(title)
     by_category(title).pluck(:title)
@@ -23,6 +25,10 @@ class Test < ApplicationRecord
 
   def active?
     questions.active.any?
+  end
+
+  def timer_in_seconds
+    timer.zero? ? 0 : (timer * 60)
   end
 
   private
