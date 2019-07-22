@@ -11,14 +11,17 @@ function startTimer(timer) {
   var timer_form = document.querySelector('#test_passage-form')
   var time_left = timer.dataset.timerLeft
   var time_total = timer.dataset.timerTotal
+  var timer_result_path = timer.dataset.timerResultPath
 
-  setTimeout(function updateTimer() {
+  setInterval(function updateTimer() {
     time_left -= 1
     var measuredTime = new Date(null)
     measuredTime.setSeconds(time_left)
 
     timer_remained.innerText = measuredTime.toISOString().substr(11, 8)
 
-    time_left > 0 ? setTimeout(updateTimer, 1000) : timer_form.submit()
+    if (time_left <= 0) {
+      window.location.replace(timer_result_path)
+    }
   }, 1000)
 }
