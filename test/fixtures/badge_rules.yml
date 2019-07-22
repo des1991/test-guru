@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rule_type: MyString
+  rule_value: MyString
+  badge: 
+
+two:
+  rule_type: MyString
+  rule_value: MyString
+  badge: 

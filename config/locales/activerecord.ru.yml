@@ -4,6 +4,8 @@ ru:
       test: "Тест"
       user: "Пользователь"
       feedback: "Обратная связь"
+      badge: "Бэйджи"
+      badge_rule: "Правило бэйджа"
 
     attributes:
       test:
@@ -17,6 +19,11 @@ ru:
         remember_me: "Запомнить меня"
       feedback:
         message: "Сообщение"
+      badge:
+        title: "Название"
+        image: "Картинка"
+      badge_rule:
+        rule_value: "Значение"
 
     errors:
       messages:

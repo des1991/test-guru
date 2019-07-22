@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :created_tests, class_name: 'Test', foreign_key: 'user_id'
   has_many :gists
   has_many :feedbacks
+  has_and_belongs_to_many :badges
   
   validates :email, format: VALID_EMAIL
   validates :email, uniqueness: { case_sensitive: false }

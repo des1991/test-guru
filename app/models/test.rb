@@ -10,10 +10,13 @@ class Test < ApplicationRecord
   scope :hard_level, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, ->(title) { 
     joins(:category).where(categories: { title: title }) }
+  scope :by_level, -> (level) { where(level: level) }
 
   validates :title, presence: true, uniqueness: { case_sensitive: false,
                                                   scope: :level }
   validates :level, numericality: { only_integer: true, 
+                                    greater_than_or_equal_to: 0 }
+  validates :timer, numericality: { only_integer: true, 
                                     greater_than_or_equal_to: 0 }
 
   def self.titles_by_category(title)
@@ -22,5 +25,15 @@ class Test < ApplicationRecord
 
   def active?
     questions.active.any?
+  end
+
+  def timer_in_seconds
+    timer.zero? ? 0 : (timer * 60)
+  end
+
+  private
+
+  def self.levels
+    all.pluck(:level).uniq.sort
   end
 end

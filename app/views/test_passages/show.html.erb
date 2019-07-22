@@ -8,9 +8,19 @@
   <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="<%= @test_passage.question_number-1 %>" aria-valuemin="0" aria-valuemax="<%= @test_passage.test.questions.count %>">0%</div>
 </div>
 
+<% if @test_passage.test.timer > 0 %>
+  <div class="mb-4" id="test_passage-timer" data-timer-left="<%= @test_passage.time_left %>" data-timer-total="<%= @test_passage.test.timer_in_seconds %>">
+    <div>
+      <%= t('.remained_time') %>
+      <span id="test_passage-timer-remained"><%= Time.at(@test_passage.time_left).utc.strftime('%H:%M:%S') %></span>
+    </div>
+  </div>
+<% end %>
+
 <%= form_with url: test_passage_path(@test_passage), 
               local: true,
-              method: :put do |form| %>
+              method: :put,
+              id: 'test_passage-form' do |form| %>
   <%= form.collection_check_boxes :answer_ids, 
                                   @test_passage.current_question.answers, 
                                   :id,

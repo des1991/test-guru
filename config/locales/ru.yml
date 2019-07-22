@@ -4,6 +4,7 @@ ru:
   nav:
     tests: "Тесты"
     gists: "Гисты"
+    badges: "Бэйджи"
 
   other:
     back: "< Назад"
@@ -12,6 +13,8 @@ ru:
     delete: "Удалить"
     confirm: "Вы уверены?"
     start: "Начать"
+    create: "Создать"
+    action: "Действие"
 
   devise:
     registrations:
@@ -121,6 +124,9 @@ ru:
         question: "Вопрос"
         gist_id: "Ссылка на Gist"
         user: "Пользователь"
+    badges:
+      show:
+        rule: "Правила"
 
   tests_mailer:
     completed_test:
@@ -135,3 +141,10 @@ ru:
       submit: "Отправить"
     create:
       sended: "Сообщение отправлено"
+
+  badges:
+    index:
+      header: "Бэйджи"
+      title: "Название"
+      image: "Картинка"
+

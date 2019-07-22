@@ -4,6 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
+  has_one :category, through: :test
 
   before_validation :before_validation_set_first_question, on: :create
   before_update :before_update_set_next_question
@@ -19,7 +20,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_percent
-    correct_questions.to_f * 100 / 2
+    correct_questions.to_f * 100 / test.questions.count
   end
 
   def passed?
@@ -28,6 +29,11 @@ class TestPassage < ApplicationRecord
 
   def question_number
     test.questions.order(:id).where('id <= ?', current_question.id).count
+  end
+
+  def time_left
+    time = created_at + test.timer_in_seconds - Time.current
+    time >= 0 ? time : 0
   end
 
   private
