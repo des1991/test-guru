@@ -36,6 +36,10 @@ class TestPassage < ApplicationRecord
     time >= 0 ? time : 0
   end
 
+  def timer?
+    test.timer > 0
+  end
+
   private
 
   def before_validation_set_first_question
