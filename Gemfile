@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Auth
-gem 'devise', '~> 4.0'
+gem 'devise', '~> 4.7'
 
 # LOCALIZATION
 gem 'rails-i18n', '~> 5.0.0'
